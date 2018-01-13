@@ -1,9 +1,12 @@
 package com.didspringboot.chapter1;
 
 import com.didspringboot.web.HelloController1;
+import com.didspringboot.web.WebProperties;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -23,6 +26,9 @@ public class Chapter1ApplicationTests {
 
 	private MockMvc mvc;
 
+	@Autowired
+	private WebProperties webProperties;
+
 	@Test
 	public void contextLoads() {
 	}
@@ -38,5 +44,11 @@ public class Chapter1ApplicationTests {
 		mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
 				.andExpect(content().string(equalTo("hello world!")));
+	}
+
+	@Test
+	public void getHello2() {
+		Assert.assertEquals(webProperties.getName(), "programmer");
+		Assert.assertEquals(webProperties.getTitle(), "spring boot");
 	}
 }
