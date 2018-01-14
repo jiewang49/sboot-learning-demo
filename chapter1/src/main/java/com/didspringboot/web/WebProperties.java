@@ -11,6 +11,9 @@ public class WebProperties {
     @Value("${com.didspringboot.web.title}")
     private String title;
 
+    @Value("${com.didspringboot.web.desc}")
+    public String desc;
+
     public String getName() {
         return name;
     }

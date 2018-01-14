@@ -50,5 +50,6 @@ public class Chapter1ApplicationTests {
 	public void getHello2() {
 		Assert.assertEquals(webProperties.getName(), "programmer");
 		Assert.assertEquals(webProperties.getTitle(), "spring boot");
+		Assert.assertEquals(webProperties.desc, "programmer is writing spring boot");
 	}
 }
