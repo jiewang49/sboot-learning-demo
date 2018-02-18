@@ -16,7 +16,7 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 
 /**
- * Created by pc on 2018/2/18.
+ * 注意包的扫描路径，把该文件放到 chapter1下似乎不行，扫描不到.
  */
 @Configuration
 @RestController
