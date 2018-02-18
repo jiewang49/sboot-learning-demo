@@ -14,12 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class ThyStaticController1 {
 
-    @RequestMapping("/")
+    @RequestMapping("/index")
 
     public String index(ModelMap modelMap) {
 
         modelMap.addAttribute("host", "study spring boot");
         return "index";
     }
-
 }
