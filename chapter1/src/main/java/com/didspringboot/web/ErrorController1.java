@@ -18,4 +18,9 @@ public class ErrorController1 {
         throw new Exception("发生错误!");
     }
 
+    @RequestMapping("/json")
+    public String json() throws Exception {
+        throw new MyException("发生json错误！");
+    }
+
 }
